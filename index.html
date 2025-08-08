@@ -5,19 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quarterly Earnings — Reveal.js</title>
 
-  <!-- Reveal.js core -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/theme/black.css" id="theme">
-
-  <!-- Highlight.js for code syntax highlighting -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
-
-  <!-- KaTeX for math rendering (used by Reveal's math plugin) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
 
   <style>
-    /* Small visual nicety for the email footer */
-    .presenter-email { position: fixed; right: 18px; bottom: 12px; font-size: 0.85rem; opacity: 0.85; }
+    .presenter-email { font-size: 1.5rem; margin-top: 2rem; }
     pre code { font-size: 0.9rem; }
   </style>
 </head>
@@ -25,15 +19,12 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- Title slide -->
       <section>
         <h1>Q2 Quarterly Earnings Report</h1>
         <h3>Major Financial Institution — Technical Summary</h3>
-        <p class="presenter-email">Contact: 24f2001293@ds.study.iitm.ac.in</p>
-        <aside class="notes">Open with high-level summary, thank stakeholders, mention that detailed slides follow. Point out the contact email on-screen.</aside>
+        <aside class="notes">Open with high-level summary, thank stakeholders, mention that detailed slides follow.</aside>
       </section>
 
-      <!-- Markdown slide (uses data-markdown plugin) -->
       <section data-markdown>
         <textarea data-template>
 ## Highlights (Markdown slide)
@@ -43,13 +34,10 @@
 - Continued improvement in **cost-efficiency**.
 
 > This slide uses Markdown (headings, bold, italics, blockquote).
-
-*Presenter note:* Summarize revenue drivers and call out one or two KPIs.
         </textarea>
         <aside class="notes">Walk through each bullet slowly — use fragments on the next slide for animation.</aside>
       </section>
 
-      <!-- Slide with fragments (animated elements) -->
       <section>
         <h2>Drivers of Revenue Growth</h2>
         <ul>
@@ -60,9 +48,8 @@
         <aside class="notes">Use fragments to reveal each driver. Pause after each point for Q/A.</aside>
       </section>
 
-      <!-- Code sample with syntax highlighting -->
       <section>
-        <h2>Example: Simple P&L Calculation (Python)</h2>
+        <h2>Example: Simple P&amp;L Calculation (Python)</h2>
         <pre><code class="language-python"># Calculate net income
 revenue = 1_250_000_000  # total revenue
 expenses = 820_000_000   # operating expenses
@@ -73,49 +60,47 @@ print(f"Net income: ${net_income:,}")
         <aside class="notes">Walk through the code quickly and show how the numbers map to the financial statements.</aside>
       </section>
 
-      <!-- Math / formula slide -->
       <section>
         <h2>Key Financial Formulas</h2>
         <p>Net Interest Margin (NIM):</p>
-        <p class="fragment">\[\text{NIM} = \frac{\text{Net Interest Income}}{\text{Average Earning Assets}} \times 100\%\]</p>
+        <p class="fragment">\\[\\text{NIM} = \\frac{\\text{Net Interest Income}}{\\text{Average Earning Assets}} \\times 100\\%\\]</p>
         <p class="fragment">Return on Equity (ROE):</p>
-        <p class="fragment">\[\text{ROE} = \frac{\text{Net Income}}{\text{Average Shareholders' Equity}}\times 100\%\]</p>
+        <p class="fragment">\\[\\text{ROE} = \\frac{\\text{Net Income}}{\\text{Average Shareholders' Equity}}\\times 100\\%\\]</p>
         <aside class="notes">Explain where each numerator and denominator comes from in the balance sheet and income statement.</aside>
       </section>
 
-      <!-- Slide with external links and publishing guidance -->
       <section>
-        <h2>Publishing & Distribution</h2>
+        <h2>Publishing &amp; Distribution</h2>
         <ol>
           <li class="fragment">Create a GitHub repo (e.g., <code>reveal-quarterly</code>).</li>
           <li class="fragment">Add this HTML file as <code>index.html</code> at the repo root.</li>
-          <li class="fragment">Enable GitHub Pages (Settings → Pages → choose branch: main / root) or push to <code>gh-pages</code> branch.</li>
-          <li class="fragment">Visit the published URL: <code>https://&lt;GITHUB-USER&gt;.github.io/&lt;REPO&gt;/</code></li>
+          <li class="fragment">Enable GitHub Pages (Settings → Pages → choose branch: main / root).</li>
+          <li class="fragment">Visit: <code>https://&lt;GITHUB-USER&gt;.github.io/&lt;REPO&gt;/</code></li>
         </ol>
-        <aside class="notes">Offer to publish on your behalf if you provide a GitHub username and repo name (or push access). Otherwise give them the exact steps and an example URL.</aside>
+        <aside class="notes">Provide these instructions clearly so they can publish easily.</aside>
       </section>
 
-      <!-- Closing slide -->
+      <!-- Dedicated email slide -->
+      <section>
+        <h2>Contact Information</h2>
+        <p class="presenter-email">24f2001293@ds.study.iitm.ac.in</p>
+        <aside class="notes">Pause here and let stakeholders note the email for follow-up.</aside>
+      </section>
+
       <section>
         <h2>Thank you</h2>
         <p>Questions?</p>
-        <p class="presenter-email">Email: 24f2001293@ds.study.iitm.ac.in</p>
         <aside class="notes">Invite questions and note follow-up materials will be shared after the call.</aside>
       </section>
 
     </div>
   </div>
 
-  <!-- Reveal.js and plugins -->
   <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
   <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
   <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
   <script src="https://unpkg.com/reveal.js@4.5.0/plugin/math/math.js"></script>
-
-  <!-- highlight.js core -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-
-  <!-- KaTeX (Reveal's math plugin will use this) -->
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
 
@@ -123,12 +108,7 @@ print(f"Net income: ${net_income:,}")
     Reveal.initialize({
       hash: true,
       plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ],
-      math: {
-        // KaTeX options
-        katex: {
-          throwOnError: false
-        }
-      }
+      math: { katex: { throwOnError: false } }
     });
   </script>
 </body>

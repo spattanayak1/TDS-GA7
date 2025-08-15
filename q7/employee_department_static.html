@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<title>Employee Department Histogram - STATIC</title>
+<style>
+pre {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<h2>Employee Department Histogram</h2>
+<h3>Verification Email: 24f2001293@ds.study.iitm.ac.in</h3>
+<p><b>Operations Department Count:</b> 2</p>
+<img src="department_distribution.png" alt="Department Histogram" width="600">
+<h3>Python Code Used (Yes, included inside the HTML!)</h3>
+<pre>
+import pandas as pd
+import matplotlib.pyplot as plt
+from io import StringIO
+
+data = '''employee_id,department,region,performance_score,years_experience,satisfaction_rating
+EMP001,R&D,Africa,79.3,11,4.7
+EMP002,IT,Middle East,78.18,2,4.4
+EMP003,HR,Asia Pacific,92.06,11,4.4
+EMP004,Sales,Africa,86.59,1,4.9
+EMP005,IT,Latin America,67.39,2,3.2
+EMP006,Operations,Asia,88.0,5,4.5
+EMP007,Operations,Europe,91.2,8,4.6
+EMP008,Sales,Latin America,74.5,3,4.1
+EMP009,R&D,Middle East,82.1,7,4.3
+EMP010,HR,Africa,90.0,10,4.8
+'''
+
+df = pd.read_csv(StringIO(data))
+operations_count = df[df['department'] == 'Operations'].shape[0]
+
+plt.figure(figsize=(8,5))
+df['department'].value_counts().plot(kind='bar', color='skyblue')
+plt.title('Employee Distribution by Department')
+plt.xlabel('Department')
+plt.ylabel('Number of Employees')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+</pre>
+</body>
+</html>
